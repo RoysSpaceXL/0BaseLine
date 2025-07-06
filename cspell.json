@@ -1,0 +1,27 @@
+// cSpell Settings
+{
+    // Version of the setting file.  Always 0.2
+    "version": "0.2",
+    // language - current active spelling language
+    "language": "en",
+    // words - list of words to be always considered correct
+    "words": [
+        "mkdirp",
+        "tsmerge",
+        "githubusercontent",
+        "streetsidesoftware",
+        "vsmarketplacebadge",
+        "startpoint", // new ignore word added
+        "spacebubble", // new ignore word added
+        "Genspark", // new ignore word added
+        "Gantt", // new ignore word added
+        "Highcharts", // new ignore word added
+        "visualstudio"
+    ],
+    // flagWords - list of words to be always considered incorrect
+    // This is useful for offensive words and common spelling errors.
+    // For example "hte" should be "the"
+    "flagWords": [
+        "hte"
+    ]
+}

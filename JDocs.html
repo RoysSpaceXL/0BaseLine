@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/Mstyles.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="icon" href="./samples/xfavicon.ico" type="image/x-icon">
+    <script defer src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <script defer src="./src/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="./src/markdown2.js"></script>
+
+    <title>Reference Docs Playground Baseline</title>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+<h1>Reference Documentations Playground Baseline</h1>
+
+<div id="app">
+    <!-- Header (outside grid) -->
+    <header class="nav-header" id="header">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="./src/X3logo.png" alt="Logo" class="logo">
+                <span class="brand-text">My Docs</span>
+            </div>
+            
+            <!-- Search -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search documentation..." aria-label="Search">
+                    <button class="search-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-results" id="search-results"></div>
+            </div>
+            
+            <!-- Main Navigation -->
+            <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+                <a href="#" class="nav-link active">Docs</a>
+                <a href="#installation" class="nav-link">Tutorials</a>
+                <a href="#examples" class="nav-link">Examples</a>
+                <a href="#methods" class="nav-link">API</a>
+            </nav>
+            
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>    
+    <!-- Main Grid Layout -->
+    <div class="layout">
+        <!-- Sidebar (Column 1) -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-nav" role="navigation" aria-label="Sidebar navigation">
+                <div class="nav-section">
+                    <h13 class="nav-section-title">
+                        📔 Introduction
+                        <button class="nav-toggle" data-section="introduction-section">
+                            <span class="chevron">▶</span>
+                        </button>
+                    </h13>
+                    <ul class="nav-list" id="introduction-section">
+                        <!-- CHANGE FROM: href="./intro/About-Playground.html" -->
+                        <!-- TO: anchor links -->
+                        <li><a href="#introduction" class="nav-item active">Introduction</a></li>
+                        <li><a href="#features" class="nav-item">Key Features</a></li>
+                        <li><a href="#about-Playground" class="nav-item">About Playground</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h13 class="nav-section-title">
+                        📚 Getting Started
+                        <button class="nav-toggle" data-section="getting-started">
+                            <span class="chevron">▶</span>
+                        </button>
+                    </h13>
+                    <ul class="nav-list" id="getting-started">
+                        <li><a href="#installation" class="nav-item">Installation</a></li>
+                        <li><a href="#quick-start" class="nav-item">Quick Start</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h13 class="nav-section-title">
+                        📊 Diagram Syntax
+                        <button class="nav-toggle" data-section="diagram-syntax">
+                            <span class="chevron">▶</span>
+                        </button>
+                    </h13>
+                    <ul class="nav-list" id="diagram-syntax">
+                        <!-- CHANGE ALL THESE TO ANCHOR LINKS -->
+                        <li><a href="#flowchart" class="nav-item">Flowchart</a></li>
+                        <li><a href="#sequence-diagram" class="nav-item">Sequence Diagram</a></li>
+                        <li><a href="#class-diagram" class="nav-item">Class Diagram</a></li>
+                        <li><a href="#packet" class="nav-item">Packet 🔥</a></li>
+                        <li><a href="#examples" class="nav-item">Other Examples</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="nav-section">
+                    <h13 class="nav-section-title">
+                        ⚙️ Configuration
+                        <button class="nav-toggle" data-section="config">
+                            <span class="chevron">▶</span>
+                        </button>
+                    </h13>
+                    <ul class="nav-list" id="config">
+                        <li><a href="#basic-config" class="nav-item">Basic Configuration</a></li>
+                        <li><a href="#advanced-config" class="nav-item">Advanced Settings</a></li>
+                        <li><a href="#themes" class="nav-item">Themes</a></li>
+                        <li><a href="#methods" class="nav-item">API Methods</a></li>
+                        <li><a href="#events" class="nav-item">Events</a></li>
+                        <li><a href="#properties" class="nav-item">Properties</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h13 class="nav-section-title">
+                        📚 Ecosystem
+                        <button class="nav-toggle" data-section="ecosystem">
+                            <span class="chevron">▶</span>
+                        </button>
+                    </h13>
+                    <ul class="nav-list" id="ecosystem">
+                        <li><a href="#Playground-chart" class="nav-item">Playground Chart</a></li>
+                        <li><a href="#tutorials" class="nav-item">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h13 class="nav-section-title">
+                        🙌 Contributing
+                        <button class="nav-toggle" data-section="contributing">
+                            <span class="chevron">▶</span>
+                        </button>
+                    </h13>
+                    <ul class="nav-list" id="contributing">
+                        <li><a href="#contributing-to" class="nav-item">Contributing</a></li>
+                        <li><a href="#security" class="nav-item">Security</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h13 class="nav-section-title">
+                        📰 Latest News
+                        <button class="nav-toggle" data-section="news">
+                            <span class="chevron">▶</span>
+                        </button>
+                    </h13>
+                    <ul class="nav-list" id="news">
+                        <li><a href="#announcements" class="nav-item">Announcements</a></li>
+                        <li><a href="#blog" class="nav-item">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        
+        <!-- Main Content (Column 2) -->
+        <main class="main-content" id="main-content">
+            <article class="article">
+                <!-- Existing content -->
+                <section ><h12 id="introduction">Introduction</h12>
+                    <div id="markdown-content1">1</div>
+                    <script>loadMarkdownSection('../README.md', 'Introduction To Playground', 'markdown-content1');</script>
+                    <p>Playground is a powerful documentation and diagramming library designed to help developers create interactive and visually appealing documentation. It supports various diagram types, including flowcharts, sequence diagrams, and class diagrams, making it easy to visualize complex concepts.</p>
+
+                    
+                    <h12 id="features">Key Features</h12>
+                    <ul>
+                        <li>Responsive design with mobile-first approach</li>
+                        <li>Dark/Light theme switching</li>
+                        <li>Client-side search functionality</li>
+                        <li>Auto-generated table of contents</li>
+                        <li>Collapsible sidebar navigation</li>
+                        <li>Performance optimizations</li>
+                    </ul>
+                </section>
+
+                <!-- About Playground Section -->
+                <section ><h12 id="about-Playground">About Playground</h12>
+                    <p>Playground is a comprehensive documentation and diagramming solution that provides powerful tools for creating interactive documentation, flowcharts, sequence diagrams, and more.</p><a data-v25abc="" class="VPLink link link" href="./intro/About-Playground.html"><p data-v25abc=""class="text">More About Playground</p></a>
+
+                    <h12>What is Playground?</h12>
+                    <p>Playground combines the power of markdown documentation with advanced diagramming capabilities, making it easy to create professional documentation that includes visual elements.</p>
+                        <a data-v25abc="" class="VPLink link link" href="./intro/getting-started.html"><p       data-v25abc="" class="text">Intro Getting Started</p>
+                    </a>
+                </section>
+
+                <!-- Installation Section -->
+                <section >                    
+                    <h12 id="installation">Installation as example</h12>
+                    <p>Get started by following these simple installation steps:<br>Purpose:<br> Shows users how to implement Playground immediately after installation.
+
+                    Structure:<br>
+
+                    Section container with quick-start heading and anchor ID<br>
+                    Action-oriented introduction promising rapid setup<br>
+                    Code block featuring:<br>
+                    JavaScript language indicator<br>
+                    More complex copy button with escaped newlines (\n)<br>
+                    Multi-line code example showing import, configuration, and initialization<br>
+                    How They Work Together<br>
+                    These sections create a linear workflow:<br><br>
+
+                    Install the package (Installation section)<br>
+                    Implement basic usage (Quick Start section)<br>
+                    Key Features<br>
+                    Interactive Elements:<br><br>
+
+                    Copy buttons with data-copy attributes for one-click copying<br>
+                    Proper syntax highlighting preparation with language indicators<br><br>
+                    User Experience:<br><br>
+
+                    Minimal friction from installation to working code<br>
+                    Clear visual separation between terminal commands and JavaScript code<br>
+                    Progressive complexity (simple install → basic implementation)</p>
+
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">bash</span>
+                                                                <button class="copy-btn" data-copy="npm install my-docs-library">Copy</button>
+                        </div>
+                                                            <pre><code>npm install my-docs-library</code></pre>
+                    </div>
+                </section>
+
+                <!-- Quick Start Section -->
+                <section >
+                    <h12 id="quick-start">Quick Start</h12>
+                    <p>Here's how to get up and running quickly:</p>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">javascript</span>
+                            <button class="copy-btn" data-copy="import MyLibrary from 'my-docs-library';\n\nconst instance = new MyLibrary({\n  theme: 'dark',\n  responsive: true\n});\n\ninstance.init();">Copy</button>
+                        </div>
+                    <pre><code>import MyLibrary from 'my-docs-library';
+
+const instance = new MyLibrary({
+  theme: 'dark',
+  responsive: true
+});
+
+instance.init();</code></pre>
+                    </div>
+                </section>
+
+                <!-- Diagram Syntax Sections -->
+                <section id="flowchart">
+                    <h12>Flowchart</h12>
+                    <p>Create beautiful flowcharts using simple syntax:</p><a data-v25abc=""
+                                                                class="VPLink link link" href="./syntax/flowchart.html"><p data-v25abc=""
+                                                                class="text">Flowchart</p></a>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">mermaid</span>
+                            <button class="copy-btn" data-copy="flowchart TD
+    A[Start] --> B{Decision?}
+    B -->|Yes| C[Action 1]
+    B -->|No| D[Action 2]
+    C --> E[End]
+    D --> E">Copy</button>
+                        </div>
+                        <pre><code>flowchart TD
+    A[Start] --> B{Decision?}
+    B -->|Yes| C[Action 1]
+    B -->|No| D[Action 2]
+    C --> E[End]
+    D --> E</code></pre>
+                    </div>
+                </section>
+
+                <section id="sequence-diagram">
+                    <h12>Sequence Diagram</h12>
+                    <p>Document interactions between different components:</p><a data-v25abc=""
+                                                        class="VPLink link link" href="./syntax/sequenceDiagram.html"><p data-v25abc=""
+                                                        class="text">Sequence Diagram</p></a>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">mermaid</span>
+                            <button class="copy-btn" data-copy="sequenceDiagram
+    participant A as Alice
+    participant B as Bob
+    A->>B: Hello Bob, how are you?
+    B-->>A: Great!">Copy</button>
+                        </div>
+                        <pre><code>sequenceDiagram
+    participant A as Alice
+    participant B as Bob
+    A->>B: Hello Bob, how are you?
+    B-->>A: Great!</code></pre>
+                    </div>
+                </section>
+
+                <section >
+                    <h12 id="class-diagram">Class Diagram</h12>
+                    <p>Model your application's structure with class diagrams:</p>
+                    <a data-v25abc="" class="VPLink link link" href="./syntax/classDiagram.html"><p data-v25abc=""
+                        class="text"> Class Diagram</p>
+                    </a>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">mermaid</span>
+                            <button class="copy-btn" data-copy="classDiagram
+    class Animal {
+        +String name
+        +makeSound()
+    }
+    class Dog {
+        +bark()
+    }
+    Animal <|-- Dog">Copy</button>
+                        </div>
+                        <pre><code>classDiagram
+    class Animal {
+        +String name
+        +makeSound()
+    }
+    class Dog {
+        +bark()
+    }
+    Animal <|-- Dog</code></pre>
+            </div>
+                    <h12 id="packet">Packet</h12>
+                    <p>Model your application's structure with Packet:</p>
+                    <a data-v25abc="" class="VPLink link link" href="./syntax/packet.html"><p data-v25abc=""
+                        class="text">Packet 🔥</p>
+                    </a>
+                    <h12 id="examples">Other Examples</h12>
+                    <p>Model your application's structure with Other Examples:</p>
+                    <a data-v25abc="" class="VPLink link link" href="./syntax/Other Examples.html"><p data-v25abc=""
+                        class="text">Other Examples 🔥</p>
+                    </a>
+                </section>
+
+                <!-- Configuration Sections -->
+                <section id="basic-config">
+                    <h12>Basic Configuration</h12>
+                    <p>Configure Playground with these basic options:</p>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">json</span>
+                            <button class="copy-btn" data-copy='{"theme": "light","responsive": true}'>Copy</button>
+                        </div>
+                        <pre><code>{
+  "theme": "light",
+  "responsive": true
+}</code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h12 id="advanced-config">Advanced Settings</h12>
+                    <p>For more complex use cases, explore these advanced configuration options:</p>
+                    
+                    <h12 id="config-options">Configuration Options</h12>
+                    <p>Available configuration parameters and their usage:</p>
+                    <ul>
+                        <li><code>theme</code> - Set the visual theme (light/dark)</li>
+                        <li><code>responsive</code> - Enable responsive behavior</li>
+                        <li><code>autoResize</code> - Automatically resize diagrams</li>
+                        <li><code>showGrid</code> - Display background grid</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h12 id="themes">Themes</h12>
+                    <p>Customize the appearance with built-in themes or create your own:</p>
+                    
+                    <h12>Available Themes</h12>
+                    <ul>
+                        <li>Light Theme</li>
+                        <li>Dark Theme</li>
+                        <li>High Contrast</li>
+                        <li>Custom Themes</li>
+                    </ul>
+                </section>
+
+                <!-- API Reference Sections -->
+                <section>
+                    <h12 id="methods">API Methods</h12>
+                    <p>Complete reference of all available methods in the API:</p>
+                    
+                    <h12>Core Methods</h12>
+                    <ul>
+                        <li><code>init()</code> - Initialize the Playground instance</li>
+                        <li><code>render()</code> - Render diagrams</li>
+                        <li><code>destroy()</code> - Clean up resources</li>
+                        <li><code>setTheme(theme)</code> - Change theme dynamically</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h12 id="events">Events</h12>
+                    <p>Event system documentation and usage examples:</p>
+                    
+                    <h12>Available Events</h12>
+                    <ul>
+                        <li><code>ready</code> - Fired when Playground is initialized</li>
+                        <li><code>render</code> - Fired when a diagram is rendered</li>
+                        <li><code>error</code> - Fired when an error occurs</li>
+                        <li><code>themeChange</code> - Fired when theme changes</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h12 id="properties">Properties</h12>
+                    <p>All configurable properties and their default values:</p>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Type</th>
+                                <th>Default</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>theme</td>
+                                <td>string</td>
+                                <td>'light'</td>
+                                <td>Visual theme</td>
+                            </tr>
+                            <tr>
+                                <td>responsive</td>
+                                <td>boolean</td>
+                                <td>true</td>
+                                <td>Enable responsive behavior</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Ecosystem Sections -->
+                <section>
+                    <h12 id="Playground-chart">Playground Chart</h12>
+                    <p>Integrate Playground with popular charting libraries:</p>
+                    
+                    <h12>Supported Libraries</h12>
+                    <ul>
+                        <li>Chart.js</li>
+                        <li>Highcharts</li>
+                        <li>Google Charts</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h12 id="tutorials">Tutorials</h12>
+                    <p>Step-by-step guides to help you get the most out of Playground:</p>
+                    
+                    <h12>Beginner Tutorials</h12>
+                    <ul>
+                        <li><a href="./tutorials/intro-to-Playground.html" class="nav-item">Introduction to Playground</a></li>
+                        <li><a href="./tutorials/first-diagram.html" class="nav-item">Creating Your First Diagram</a></li>
+                    </ul>
+                    
+                    <h12>Advanced Tutorials</h12>
+                    <ul>
+                        <li><a href="./tutorials/Playground-with-react.html" class="nav-item">Using Playground with React</a></li>
+                        <li><a href="./tutorials/Playground-with-vue.html" class="nav-item">Using Playground with Vue</a></li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h12 id="api-usage">API-Usage</h12>
+                    <p>Understand how to use the Playground API effectively:</p>
+                    
+                    <h12>Making API Calls</h12>
+                    <p>Learn how to make API calls to Playground:</p>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">javascript</span>
+                            <button class="copy-btn" data-copy='fetch("https://api.Playground.com/v1/docs").then(response => response.json()).then(data => console.log(data));'>Copy</button>
+                        </div>
+                        <pre><code>fetch('https://api.Playground.com/v1/docs')
+  .then(response => response.json())
+  .then(data => console.log(data));</code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h12 id="Playground-api-configuration">Playground API Configuration</h12>
+                    <p>Configure the Playground API settings:</p>
+                    
+                    <h12>API Key</h12>
+                    <p>Obtain your API key from the Playground dashboard and set it in your configuration:</p>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">json</span>
+                            <button class="copy-btn" data-copy='{"apiKey": "YOUR_API_KEY"}'>Copy</button>
+                        </div>
+                        <pre><code>{
+  "apiKey": "YOUR_API_KEY"
+}</code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h12 id="Playground-configuration-options">Playground Configuration Options</h12>
+                    <p>Explore the available configuration options for Playground:</p>
+                    
+                    <h12>Common Options</h12>
+                    <ul>
+                        <li><code>theme</code> - Set the visual theme (light/dark)</li>
+                        <li><code>responsive</code> - Enable responsive behavior</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h12 id="faq">FAQ</h12>
+                    <p>Frequently asked questions about Playground:</p>
+                    
+                    <h12>General Questions</h12>
+                    <ul>
+                        <li><a href="#what-is-Playground">What is Playground?</a></li>
+                        <li><a href="#how-to-install">How to install Playground?</a></li>
+                    </ul>
+                </section>
+
+                <!-- Contributing Sections -->
+                <section >
+                    <h12 id="contributing-to">Contributing to Playground</h12>
+                    <p>Learn how to contribute to the Playground project:</p>
+                    
+                    <h12>Getting Started with contributing to Playground</h12>
+                    <p>Follow these steps to get started with contributing:</p>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">bash</span>
+                            <button class="copy-btn" data-copy='git clone https://github.com/your-repo/Playground.git
+cd Playground
+npm install'>Copy</button>
+                        </div>
+                        <pre><code>git clone https://github.com/your-repo/Playground.git
+cd Playground
+npm install</code></pre>
+                    </div>
+                </section>
+
+                <section >
+                        <h12 id="adding-diagrams">Adding Diagrams</h12>
+                        <p>Contribute your diagrams to the Playground project:</p>
+                        
+                        <h12>Diagram Guidelines</h12>
+                        <p>Follow these guidelines when creating diagrams:</p>
+                        <ul>
+                            <li>Use clear and descriptive labels</li>
+                            <li>Keep diagrams simple and focused</li>
+                            <li>Ensure diagrams are responsive</li>
+                        </ul>
+                </section>
+
+                <section >
+                    <h12 id="questions-and-suggestions">Questions and Suggestions</h12>
+                    <p>We welcome your questions and suggestions:</p>
+                    
+                    <h12>Contact Us</h12>
+                    <p>Reach out to us via the following channels:</p>
+                    <ul>
+                        <li>Email: support@Playground.com</li>
+                        <li>Twitter: @Playground</li>
+                    </ul>
+                </section>
+
+                <section >
+                    <h12 id="security">Security</h12>
+                    <p>Your security is important to us:</p>
+                     
+                    <h12>Reporting Vulnerabilities</h12>
+                    <p>If you discover a security vulnerability, please report it:</p>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">markdown</span>
+                            <button class="copy-btn" data-copy='**Security Vulnerability Report**
+
+**Description:** [Provide a brief description of the vulnerability]
+
+**Steps to Reproduce:** [Detail the steps to reproduce the vulnerability]
+
+**Impact:** [Explain the potential impact of the vulnerability]
+
+**Mitigation:** [Suggest mitigations or fixes]'>Copy</button>
+                        </div>
+                        <pre><code>**Security Vulnerability Report**
+
+**Description:** [Provide a brief description of the vulnerability]
+
+**Steps to Reproduce:** [Detail the steps to reproduce the vulnerability]
+
+**Impact:** [Explain the potential impact of the vulnerability]
+
+**Mitigation:** [Suggest mitigations or fixes]
+
+**Reporter Information:** [Optional: Your name and contact information]</code></pre>
+                    </div>
+                </section>
+
+                <!-- News Sections -->
+                <section id="announcements">
+                    <h12>Announcements</h12>
+                    <p>Stay updated with the latest announcements:</p>
+                    
+                    <h12>Version 2.0 Released</h12>
+                    <p>We are excited to announce the release of Playground version 2.0. This major update includes:</p>
+                    <ul>
+                        <li>New diagram types: Gantt charts, Pie charts</li>
+                        <li>Enhanced API with new endpoints</li>
+                        <li>Improved performance and stability</li>
+                    </ul>
+                </section>
+
+                <section id="blog">
+                    <h12>Blog</h12>
+                    <p>Read the latest blog posts:</p>
+                    
+                    <h12>Introducing Playground 2.0</h12>
+                    <p>Discover the new features and improvements in Playground 2.0:</p>
+                    <a href="./blog/introducing-Playground-2-0.html" class="nav-item">Read more</a>
+                </section>
+            </article>
+        </main>
+        
+        <!-- Table of Contents (Column 3) -->
+        <aside class="toc" id="toc">
+            <div class="toc-header">
+                <h14>On this page</h14>
+            </div>
+            <nav class="toc-nav" id="toc-nav" role="navigation" aria-label="Table of contents">
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#about-Playground">About Playground</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#quick-start">Quick Start</a></li>
+                    <li><a href="#flowchart">Flowchart</a></li>
+                    <li><a href="#sequence-diagram">Sequence Diagram</a></li>
+                    <li><a href="#class-diagram">Class Diagram</a></li>
+                    <li><a href="#basic-config">Basic Configuration</a></li>
+                    <li><a href="#advanced-config">Advanced Settings</a></li>
+                    <li><a href="#themes">Themes</a></li>
+                    <li><a href="#methods">API Methods</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#Playground-chart">Playground Chart</a></li>
+                    <li><a href="#tutorials">Tutorials</a></li>
+                    <li><a href="#contributing-to">Contributing</a></li>
+                    <li><a href="#security">Security</a></li>
+                    <li><a href="#announcements">Announcements</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+     <!-- End of .layout -->
+    <!-- Loading Indicator -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Image Gallery Section -->
+    <section class="image-gallery">
+        <div class="item item-1">1
+            <p>A stylized background inspired by the Netflix series "Shadow and Bone," featuring abstract bone and shadow shapes for a dramatic effect.</p>
+            <img src="./images/2im/21-bck_grnd-sh_bones.png" alt="Image van div 1" class="image1"/>
+        </div>
+        
+        <div class="item item-2">2
+            <p>The Firefox web browser logo, representing open-source technology, privacy, and internet freedom.</p>
+            <img src="./images/2im/22-FF_image.JPG" alt="Image van div 2" class="image2"/>
+        </div>
+        
+        <div class="item item-3">3
+            <p1>The OpenAI logo, symbolizing artificial intelligence, machine learning, and innovative technology</p1>
+            <img src="./images/2im/23-open_ai.png" alt="Image van div 3" class="image3"/>
+        </div>
+        
+        <div class="item item-4">4
+            <p1>An illustration of a lizard, adding a playful and natural element to the design.</p1>
+            <img src="./images/2im/24-Lizard.png" alt="Image van div 4" class="image4"/>
+        </div>
+    </section>
+
+</div> <!-- End of #app -->
+<div id="markdown-content">5</div>
+<script>loadMarkdownSection('./README.md', '1 Playground', 'markdown-content');</script>
+
+note 1: <br>notes are .. , ..,<br> 
+note 2: <br>  ..  <br>
+</body>
+</html>
