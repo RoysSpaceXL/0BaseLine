@@ -1,0 +1,75 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# dotenv environment variables
+.env
+.env.*
+
+
+# Build output
+dist/
+build/
+out/
+samples/
+
+# Dependency directories
+bower_components/
+jspm_packages/
+
+# Misc
+*.sublime-workspace
+*.sublime-project
+.idea/
+*.swp
+*.bak
+*.tmp
+
+# Misc
+*.tgz
+*.zip
+*.tar.gz
+coverage/
+
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+
+# Temporary files
+tmp/
+
+# Archive files
+archive/
+
+# Backup files
+*.bak
+*copy*.md
+*copy*.txt
+*copy*.json
+*copy*.html
