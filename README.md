@@ -1,4 +1,5 @@
-# Playground
+# Baseline 
+-Version 25v0
 - A collection of projects and experiments in various stages of development, including baseline, rookie, and arcade levels. Inspiration from AZR LLM, focusing on the journey from chaos to organized order. 
 -  project principles/philosophy/framework
 - results/visuals of the action.
@@ -37,8 +38,8 @@ Complete build up in 1 project/container/context within 9 blocks;
 ## 1.3 result/visuals  
 each block should be exchangeable / replicable;
 each parent-content/context can be detailed out in max 3 child levels.   
-results in new Playground data for markdown.js  
-for import in the Playground data repository;
+results in new Baseline data for markdown.js  
+for import in the Baseline data repository;
 
 ### 1.3.1 Overview of 0Baseline - 2Arcade project documents beads
 - core principles;
@@ -118,15 +119,15 @@ AZR LLM Inspiration /visions;
 
 !["45.2 Vision Bubbles From Dreams to Creation Flow"](./images/xREADME2.png) Based On AZR LLM Inspiration /Visions.
 
-# PlayGround Project Environment
+# Baseline Project Environment
 - The project is hosted on GitHub, with a structured approach to development and documentation.
 - Site is hosted at:  
-https://github.com/RoysSpaceXL/PlayGround/blob/0BaseLine/0BaseLine/45.2%20Vision%20Bubbles%20From%20Dreams%20to%20Creation%20Flow.md  
+https://github.com/RoysSpaceXL/Baseline/blob/0BaseLine/0BaseLine/45.2%20Vision%20Bubbles%20From%20Dreams%20to%20Creation%20Flow.md  
 
 - or link: [0Baseline; From Dreams to Creation Flow](/0BaseLine/45.2%20Vision%20Bubbles%20From%20Dreams%20to%20Creation%20Flow.md)
-- The site is live at https://roysspacexl.github.io/PlayGround/
+- The site is live at https://roysspacexl.github.io/0Baseline/
 
-## PlayGround Project Overview
+## Baseline Project Overview
 - Triple steps approach to project development:
   - **0Baseline**: Initial project setup and basic structure.
   - **1Rookie**: Intermediate development with added features and improvements.

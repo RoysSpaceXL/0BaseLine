@@ -1,22 +1,22 @@
-# Playground Storybook-v1
+# Baseline Storybook-25v0
 
-# 1 Introduction Of Playground
+# 1 Introduction Of Baseline
 - Setup of public website
 
-- This is a repository for the Playground project, which is a collection of gems and resources for developers to create interactive documentation and diagrams.
+- This is a repository for the Baseline project, which is a collection of gems and resources for developers to create interactive documentation and diagrams.
 - The project is designed to be user-friendly and accessible, providing a platform for developers to showcase their work and share knowledge with the community.
-- Playground is a versatile tool that allows developers to create interactive documentation, flowcharts, sequence diagrams
+- Baseline is a versatile tool that allows developers to create interactive documentation, flowcharts, sequence diagrams
 - The project aims to provide a user-friendly interface for accessing and utilizing YouTube data, including video information, channel details, and more.
 - This repository is hosted at:  
 The original repository is located at:  
-https://github.com/RoysSpaceXL/Playground  
-https://roysspacexl.github.io/Playground/   
+https://github.com/RoysSpaceXL/Baseline  
+https://roysspacexl.github.io/Baseline/   
 is out of order,  
 To view the Main Host website, you can use the link of spacebubble.org.  
 https://spacebubble.org/  
 
 ## 1.1 Introduction
-Playground is a powerful documentation and diagramming library designed to help developers create interactive and visually appealing documentation. It supports various diagram types, including flowcharts, sequence diagrams, and class diagrams, making it easy to visualize complex concepts.
+Baseline is a powerful documentation and diagramming library designed to help developers create interactive and visually appealing documentation. It supports various diagram types, including flowcharts, sequence diagrams, and class diagrams, making it easy to visualize complex concepts.
 
 ## 1.2 Key Features
 - Responsive design with mobile-first approach
@@ -26,18 +26,18 @@ Playground is a powerful documentation and diagramming library designed to help 
 - Collapsible sidebar navigation
 - Performance optimizations
 
-## 1.3 About Playground
-Playground is a comprehensive documentation and diagramming solution that provides powerful tools for creating interactive documentation, flowcharts, sequence diagrams, and more.
+## 1.3 About Baseline
+Baseline is a comprehensive documentation and diagramming solution that provides powerful tools for creating interactive documentation, flowcharts, sequence diagrams, and more.
 
-### 1.3.1 What is Playground?
-Playground combines the power of markdown documentation with advanced diagramming capabilities, making it easy to create professional documentation that includes visual elements.
+### 1.3.1 What is Baseline?
+Baseline combines the power of markdown documentation with advanced diagramming capabilities, making it easy to create professional documentation that includes visual elements.
 
 # 2 Getting Started
 
 ## 2.1 Installation
 Get started by following these simple installation steps:
 
-Shows users how to implement Playground immediately after installation.
+Shows users how to implement Baseline immediately after installation.
 
 Structure:
 - Section container with quick-start heading and anchor ID
@@ -127,7 +127,7 @@ Model your application's structure with Other Examples.
 # 4 Configuration
 
 ## 4.1 Basic Configuration
-Configure Playground with these basic options:
+Configure Baseline with these basic options:
 
 ```json
 {
@@ -176,7 +176,7 @@ Customize the appearance with built-in themes or create your own:
 Complete reference of all available methods in the API:
 
 ### Core Methods
-- `init()` - Initialize the Playground instance
+- `init()` - Initialize the Baseline instance
 - `render()` - Render diagrams
 - `destroy()` - Clean up resources
 - `setTheme(theme)` - Change theme dynamically
@@ -185,7 +185,7 @@ Complete reference of all available methods in the API:
 Event system documentation and usage examples:
 
 ### Available Events
-- `ready` - Fired when Playground is initialized
+- `ready` - Fired when Baseline is initialized
 - `render` - Fired when a diagram is rendered
 - `error` - Fired when an error occurs
 - `themeChange` - Fired when theme changes
@@ -199,22 +199,22 @@ All configurable properties and their default values:
 | responsive | boolean | true | Enable responsive behavior |
 
 ## 5.4 API Usage
-Understand how to use the Playground API effectively:
+Understand how to use the Baseline API effectively:
 
 ### Making API Calls
-Learn how to make API calls to Playground:
+Learn how to make API calls to Baseline:
 
 ```javascript
-fetch('https://api.Playground.com/v1/docs')
+fetch('https://api.Baseline.com/v1/docs')
   .then(response => response.json())
   .then(data => console.log(data));
 ```
 
-## 5.5 Playground API Configuration
-Configure the Playground API settings:
+## 5.5 Baseline API Configuration
+Configure the Baseline API settings:
 
 ### API Key
-Obtain your API key from the Playground dashboard and set it in your configuration:
+Obtain your API key from the Baseline dashboard and set it in your configuration:
 
 ```json
 {
@@ -222,8 +222,8 @@ Obtain your API key from the Playground dashboard and set it in your configurati
 }
 ```
 
-## 5.7 Playground Configuration Options
-Explore the available configuration options for Playground:
+## 5.7 Baseline Configuration Options
+Explore the available configuration options for Baseline:
 
 ### Common Options
 - `theme` - Set the visual theme (light/dark)
@@ -231,8 +231,8 @@ Explore the available configuration options for Playground:
 
 # 6 Ecosystem
 
-## 6.1 Playground Chart
-Integrate Playground with popular charting libraries:
+## 6.1 Baseline Chart
+Integrate Baseline with popular charting libraries:
 
 ### Supported Libraries
 - Chart.js
@@ -240,41 +240,41 @@ Integrate Playground with popular charting libraries:
 - Google Charts
 
 ## 6.2 Tutorials
-Step-by-step guides to help you get the most out of Playground:
+Step-by-step guides to help you get the most out of Baseline:
 
 ### Beginner Tutorials
-- Introduction to Playground
+- Introduction to Baseline
 - Creating Your First Diagram
 
 ### Advanced Tutorials
-- Using Playground with React
-- Using Playground with Vue
+- Using Baseline with React
+- Using Baseline with Vue
 
 # 7 FAQ
 
 ## 7.1 Frequently Asked Questions
-Frequently asked questions about Playground:
+Frequently asked questions about Baseline:
 
 ### General Questions
-- What is Playground?
-- How to install Playground?
+- What is Baseline?
+- How to install Baseline?
 
 # 8 Contributing
 
-## 8.1 Contributing to Playground
-Learn how to contribute to the Playground project:
+## 8.1 Contributing to Baseline
+Learn how to contribute to the Baseline project:
 
-### Getting Started with contributing to Playground
+### Getting Started with contributing to Baseline
 Follow these steps to get started with contributing:
 
 ```bash
-git clone https://github.com/your-repo/Playground.git
-cd Playground
+git clone https://github.com/your-repo/Baseline.git
+cd Baseline
 npm install
 ```
 
 ## 8.2 Adding Diagrams
-Contribute your diagrams to the Playground project:
+Contribute your diagrams to the Baseline project:
 
 ### Diagram Guidelines
 Follow these guidelines when creating diagrams:
@@ -287,8 +287,8 @@ We welcome your questions and suggestions:
 
 ### Contact Us
 Reach out to us via the following channels:
-- Email: support@Playground.com
-- Twitter: @Playground
+- Email: support@Baseline.com
+- Twitter: @Baseline
 
 ## 8.4 Security
 Your security is important to us:
@@ -316,7 +316,7 @@ If you discover a security vulnerability, please report it:
 Stay updated with the latest announcements:
 
 ### Version 2.0 Released
-We are excited to announce the release of Playground version 2.0. This major update includes:
+We are excited to announce the release of Baseline version 2.0. This major update includes:
 - New diagram types: Gantt charts, Pie charts
 - Enhanced API with new endpoints
 - Improved performance and stability
@@ -324,8 +324,8 @@ We are excited to announce the release of Playground version 2.0. This major upd
 ## 9.2 Blog
 Read the latest blog posts:
 
-###  Introducing Playground 2.0
-Discover the new features and improvements in Playground 2.0.
+###  Introducing Baseline 2.0
+Discover the new features and improvements in Baseline 2.0.
 
 ###  Appendix: Image Gallery
 
