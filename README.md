@@ -214,3 +214,19 @@ All visible folders including 0Baseline, 1Rookie, and 2Arcade
 The complete contents of the 45 folder
 Root level files like gitattributes
 Maintains proper Markdown formatting
+
+# 8 References
+
+https://roysspacexl.github.io/YouGems/ 
+https://spacebubble.org/
+https://roysspacexl.github.io/PlayGround/   
+
+https://roysspacexl.github.io/PlayGround/0Baseline
+https://roysspacexl.github.io/PlayGround/1Rookie/   
+https://roysspacexl.github.io/PlayGround/2Arcade/   
+
+https://roysspacexl.github.io/0Baseline/   
+https://roysspacexl.github.io/1Rookie/
+https://roysspacexl.github.io/2Arcade/
+
+
