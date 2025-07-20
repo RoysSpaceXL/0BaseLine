@@ -16,6 +16,7 @@
         "Genspark", // new ignore word added
         "Gantt", // new ignore word added
         "Highcharts", // new ignore word added
+        "Yougems", // new ignore word added
         "visualstudio"
     ],
     // flagWords - list of words to be always considered incorrect
